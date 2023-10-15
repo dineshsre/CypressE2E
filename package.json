@@ -1,0 +1,25 @@
+{
+  "name": "cypresse2e",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dineshsre/CypressE2E.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dineshsre/CypressE2E/issues"
+  },
+  "homepage": "https://github.com/dineshsre/CypressE2E#readme",
+  "dependencies": {
+    "cypress": "^13.3.1"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.1.0"
+  }
+}
