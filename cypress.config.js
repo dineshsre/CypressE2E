@@ -9,7 +9,8 @@ module.exports = defineConfig({
     },
   },
   env:{
-    baseURL: "https://naveenautomationlabs.com/opencart/index.php?route=account/register"
+    baseURL: "https://naveenautomationlabs.com/opencart/index.php?route=account/register",
+    orangeURL: "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
 
   },
 });

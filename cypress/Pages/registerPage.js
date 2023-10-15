@@ -14,7 +14,7 @@ export class registerPage{
 
      openURL(){
 
-        cy.visit(Cypress.env("baseURL"))
+        cy.visit(Cypress.env("baseURL"))//env variable set in cypress.config.js
 
     }
 
