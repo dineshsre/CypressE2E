@@ -12,6 +12,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
             command: npm run test:OrangeHRM
+            browser: firefox
     
     Open-CartReg-run:
     runs-on: ubuntu-22.04
@@ -25,6 +26,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-            command: npm run test:OpenCartReg        
+            command: npm run test:OpenCartReg
+            browser: chrome        
 
             
