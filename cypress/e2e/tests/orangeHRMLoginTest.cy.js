@@ -1,6 +1,6 @@
-import { orangeHRM } from "../Pages/orangeHRMLoginDemo"
+import { orangeHRM } from "../../Pages/orangeHRMLoginDemo"
 const orangeHRMobj = new orangeHRM()
-import orangeHRMData from "../../cypress/fixtures/orangeHRMData.json"
+import orangeHRMData from "../../fixtures/orangeHRMData.json"
 
 describe("OrangeHEM login Test Demo",()=>{
 

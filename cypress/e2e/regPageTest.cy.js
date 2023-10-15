@@ -1,5 +1,5 @@
-import { registerPage } from "../../Pages/registerPage"
-import regData from "../../fixtures/regData.json"
+import { registerPage } from "../Pages/registerPage"
+import regData from "../fixtures/regData.json"
 const regobj = new registerPage()
 describe("Register Page Test ",()=>{
 
