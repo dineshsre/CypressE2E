@@ -12,6 +12,8 @@ jobs:
         uses: cypress-io/github-action@v6
 
       - name: Cypress Reports
+      # for report generation even if testcases failed
+        if: always()
         uses: actions/upload-artifact@v3
         with:
              name: Mochawesome HTML Report
