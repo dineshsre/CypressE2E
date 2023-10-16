@@ -2,7 +2,7 @@ export class orangeHRM{
 
     OrangeHRMLocators={
         userName: "input[placeholder='Username']",
-        password: "input[placeholder='Password']",
+        password: "input[placeholder='Passsword']",
         login: "button[type='submit']"
     }
 
