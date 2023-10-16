@@ -17,4 +17,15 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
              name: Mochawesome HTML Report
-             path: cypress/reports/html/ # or path/to/artifact  
+             path: cypress/reports/html/ # or path/to/artifact
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_CHANNEL: general
+          SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
+          SLACK_ICON: https://github.com/rtCamp.png?size=48
+          SLACK_MESSAGE: 'Automation Report https://github.com/dineshsre/CypressE2E/actions/runs/${github.run_id}'
+          SLACK_TITLE: Slack Notification on Web Test using Cypress
+          SLACK_USERNAME: DummyUser
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+
