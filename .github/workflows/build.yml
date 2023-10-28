@@ -1,30 +1,27 @@
 name: Regression End-to-end tests
-on: push
+'on': push
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      # Install npm dependencies, cache them correctly
-      # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v6
-
       - name: Cypress Reports
-      # for report generation even if testcases failed
         if: always()
         uses: actions/upload-artifact@v3
         with:
-             name: Mochawesome HTML Report
-             path: cypress/reports/html/ # or path/to/artifact
+          name: Mochawesome HTML Report
+          path: cypress/reports/html/
       - name: Slack Notification
         if: always()
         uses: rtCamp/action-slack-notify@v2
         env:
-          SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
-          SLACK_ICON: https://github.com/rtCamp.png?size=48
-          SLACK_MESSAGE: 'Automation Report https://github.com/dineshsre/CypressE2E/actions/runs/${{github.run_id}}'
+          SLACK_COLOR: '${{ job.status }}'
+          SLACK_ICON: 'https://github.com/rtCamp.png?size=48'
+          SLACK_MESSAGE: >-
+            Automation Report
+            https://github.com/dineshsre/CypressE2E/actions/runs/${{github.run_id}}
           SLACK_TITLE: Slack Notification on Web Test using Cypress
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-
+          SLACK_WEBHOOK: '${{secrets.SLACK_WEBHOOK}}'
