@@ -6,9 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:OrangeHRM": "npx cypress run --spec cypress/e2e/tests/orangeHRMLoginTest.cy.js",
-    "test:OpenCartReg": "npx cypress run --spec cypress/e2e/regPageTest.cy.js"
-    
-    
+    "test:OpenCartReg": "npx cypress run --spec cypress/e2e/regPageTest.cy.js",
+    "test2": "npx cypress run --record --key 4148db9b-514f-4116-abfa-9e0194e6e3bc"    
   },
   "repository": {
     "type": "git",
