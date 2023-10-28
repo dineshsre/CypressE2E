@@ -13,7 +13,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
             command : npm run test:OpenCartReg
-            browser : firefox
+            #browser : firefox
   orangehrm-run:
     runs-on: ubuntu-22.04
     steps:
@@ -25,4 +25,4 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
             command : npm run test:OrangeHRM
-            browser : chrome          
+            # browser : chrome          
