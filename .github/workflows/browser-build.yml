@@ -13,6 +13,13 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
             command : npm run test:OpenCartReg
+
+      - name: Cypress Reports
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: Mochawesome HTML Report - OpenCart
+          path: cypress/reports/html/
             #browser : firefox
   orangehrm-run:
     runs-on: ubuntu-22.04
@@ -25,4 +32,11 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
             command : npm run test:OrangeHRM
+
+      - name: Cypress Reports
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+           name: Mochawesome HTML Report- Orange - HRM
+           path: cypress/reports/html/
             # browser : chrome          
