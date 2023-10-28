@@ -1,5 +1,5 @@
 # https://github.com/cypress-io/github-action
-name: Browser Test Build
+name: Parallel Testing of jobs
 on: push
 jobs:
   opencart-run:
