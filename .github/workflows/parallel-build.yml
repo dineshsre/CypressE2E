@@ -14,9 +14,9 @@ jobs:
             command: npm run test:OrangeHRM
             browser: firefox
     
-    Open-CartReg-run:
-    runs-on: ubuntu-22.04
-    steps:
+  Open-CartReg-run:
+     runs-on: ubuntu-22.04
+     steps:
       - name: Checkout
         uses: actions/checkout@v4
         
